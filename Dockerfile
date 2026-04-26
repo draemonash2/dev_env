@@ -48,6 +48,7 @@ RUN apt-get update \
     iproute2 \
     iputils-ping \
     pipx \
+    python3-pip \
     ros-jazzy-rmw-cyclonedds-cpp \
     ros-jazzy-moveit-visual-tools \
     ros-jazzy-moveit-ros-planning-interface \
@@ -64,16 +65,16 @@ RUN apt-get update \
     pylint \
     mypy \
     cpplint \
+    flake8 \
  && rm -rf /var/lib/apt/lists/*
-# TODO:
-#    scipy
-#    trimesh
-#    manifold3d==2.5.1 \
-#    pymeshlab==2022.2.post4 \
-#    pycollada==0.8
-#    pandas
-#    # flake8
-#    # bpy \  # TODO:
+
+RUN python3 -m pip install --no-cache-dir --break-system-packages \
+    scipy \
+    trimesh \
+    manifold3d \
+    pymeshlab \
+    pycollada \
+    pandas
 
 RUN curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh \
  && bash nodesource_setup.sh \
