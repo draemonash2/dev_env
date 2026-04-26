@@ -29,7 +29,7 @@ Dockerコンテナ上に開発環境を構築するためのリポジトリ。
 1. DockerイメージビルドおよびDockerコンテナ作成を行う。
 
     ```bash
-    cd /path/to/ros2_jazzy/docker
+    cd /path/to/ros2_humble/docker
     ./init.sh
     ```
 
