@@ -86,5 +86,4 @@ echo "---- executing commands in the container"
 docker exec -it $CONTAINER_NAME /home/$USER/install_prg.sh
 
 echo "---- attach the container"
-# docker attach $CONTAINER_NAME
-docker exec -it $CONTAINER_NAME /bin/bash
+docker exec -e DISPLAY -it $CONTAINER_NAME /ros_entrypoint.sh bash
