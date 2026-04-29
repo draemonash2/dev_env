@@ -22,15 +22,16 @@ function createhardlink() {
     ln -f "${src_file_path}" "${target_file_path}"
 }
 mkdir -p ${MOUNT_DIR_PATH}
-createhardlink ~/_dotfiles/.bashrc              ${MOUNT_DIR_PATH}/.bashrc
-createhardlink ~/_dotfiles/.bashrc_env          ${MOUNT_DIR_PATH}/.bashrc_env
-createhardlink ~/_dotfiles/.gdbinit             ${MOUNT_DIR_PATH}/.gdbinit
-createhardlink ~/_dotfiles/.inputrc             ${MOUNT_DIR_PATH}/.inputrc
-createhardlink ~/_dotfiles/.tigrc               ${MOUNT_DIR_PATH}/.tigrc
-createhardlink ~/_dotfiles/.tmux.conf           ${MOUNT_DIR_PATH}/.tmux.conf
-createhardlink ~/_dotfiles/.vimrc               ${MOUNT_DIR_PATH}/.vimrc
-createhardlink ~/_dotfiles/.ai_agents/AGENTS.md ${MOUNT_DIR_PATH}/.gemini/GEMINI.md
-createhardlink ~/_dotfiles/.ai_agents/AGENTS.md ${MOUNT_DIR_PATH}/.claude/CLAUDE.md
+createhardlink ~/_dotfiles/.bashrc               ${MOUNT_DIR_PATH}/.bashrc
+createhardlink ~/_dotfiles/.bashrc_env           ${MOUNT_DIR_PATH}/.bashrc_env
+createhardlink ~/_dotfiles/.gdbinit              ${MOUNT_DIR_PATH}/.gdbinit
+createhardlink ~/_dotfiles/.inputrc              ${MOUNT_DIR_PATH}/.inputrc
+createhardlink ~/_dotfiles/.tigrc                ${MOUNT_DIR_PATH}/.tigrc
+createhardlink ~/_dotfiles/.tmux.conf            ${MOUNT_DIR_PATH}/.tmux.conf
+createhardlink ~/_dotfiles/.vimrc                ${MOUNT_DIR_PATH}/.vimrc
+createhardlink ~/_dotfiles/.ai_agents/AGENTS.md  ${MOUNT_DIR_PATH}/.gemini/GEMINI.md
+createhardlink ~/_dotfiles/.ai_agents/AGENTS.md  ${MOUNT_DIR_PATH}/.claude/CLAUDE.md
+createhardlink ~/_dotfiles/.claude/settings.json ${MOUNT_DIR_PATH}/.claude/settings.json
 cp -rf ~/.vim ${MOUNT_DIR_PATH}/.
 echo ${CONTAINER_NAME} > ${MOUNT_DIR_PATH}/.dockercontainer
 FILE=/home/$USER/_app/virtualgl_3.1_amd64.deb
